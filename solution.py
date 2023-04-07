@@ -4,7 +4,7 @@ import numpy as np
 from scipy.stats import chi2
 
 
-chat_id = 123456 # Ваш chat ID, не меняйте название переменной
+chat_id = 6064443932 # Ваш chat ID, не меняйте название переменной
 
 def solution(p: float, x: np.array) -> tuple:
     # Измените код этой функции
