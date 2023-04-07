@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+from math import sqrt
 
 from scipy.stats import chi2
 
@@ -11,6 +12,7 @@ def solution(p: float, x: np.array) -> tuple:
     # Это будет вашим решением
     # Не меняйте название функции и её аргументы
     
+    n = len(x)
     x = np.square(x).sum()
     
-    return sqrt(x / 42 / chi.ppf((p + 1) / 2, 2 * len(x))), sqrt(x / 42 / chi.ppf((1 - p) / 2, 2 * len(x)))
+    return sqrt(x / 42 / chi2.ppf((p + 1) / 2, 2 * n)), sqrt(x / 42 / chi2.ppf((1 - p) / 2, 2 * n))
